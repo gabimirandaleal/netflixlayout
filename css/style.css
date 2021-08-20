@@ -1,0 +1,203 @@
+h1 {
+    font-size: 2em;
+}
+
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url(../img/background-image.jpg);
+    background-attachment: fixed;
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0;
+}
+
+main {
+    margin-bottom: 130px;
+}
+
+.div-forms {
+    width: 300px;
+    height: 500px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 40px 60px;
+}
+
+#email {
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+#password {
+    margin-bottom: 30px;
+}
+
+#password,
+#email {
+    padding-left: 20px;
+    background: #333333;
+    box-sizing: border-box;
+}
+
+header {
+    padding: 30px;
+}
+
+#password,
+#email,
+#entrar {
+    width: 300px;
+    height: 45px;
+    border-radius: 5px;
+    border: 0;
+}
+
+#checkbox {
+    margin-left: 0px;
+}
+
+#help {
+    float: right;
+}
+
+.div-forms-checkbox {
+    margin-top: 10px;
+}
+
+input {
+    padding: 0;
+    vertical-align: middle;
+}
+
+button {
+    background-color: #E64C22;
+    color: white;
+    padding: 0;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #B83D1C;
+}
+
+.button-bottom {
+    margin-bottom: 20px;
+}
+
+.cadastrar {
+    margin: 20px 0;
+}
+
+.div-all {
+    font-size: 0.83em;
+}
+
+a {
+    text-decoration: none;
+    color: #B3B3B3;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    color: #B3B3B3;
+}
+
+.rodape-div {
+    padding: 15px;
+    width: 100%;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.92);
+    box-sizing: border-box;
+}
+
+nav {
+    margin: 0 auto;
+}
+
+.div-filha {
+    display: flex;
+    justify-content: center;
+}
+
+.div-filha p {
+    padding-bottom: 20px;
+}
+
+.columns {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    width: 700px;
+}
+
+li {
+    margin-bottom: 25px;
+    font-size: 0.83em;
+    width: 150px;
+}
+
+@media (max-width: 739px) {
+    body {
+        background: black;
+    }
+    .div-forms {
+        align-items: l;
+        width: 100%;
+        padding: 0 30px;
+        box-sizing: border-box;
+    }
+    .form {
+        width: 100%;
+    }
+    #password,
+    #email,
+    #entrar {
+        width: 100%;
+        height: 45px;
+        border-radius: 5px;
+        border: 0;
+    }
+    footer {
+        text-align: left;
+        padding-left: 30px;
+        box-sizing: border-box;
+    }
+    .rodape-div {
+        padding: 0;
+    }
+    .columns {
+        list-style: none;
+        width: 100%;
+    }
+    li {
+        padding-right: 20px;
+        margin-bottom: 25px;
+        font-size: 0.83em;
+        width: 30%;
+        box-sizing: border-box;
+    }
+}
+
+@media (max-width: 490px) {
+    body {
+        margin: 0;
+    }
+    footer {
+        text-align: left;
+    }
+    .columns {
+        list-style: none;
+        width: 100%;
+    }
+    li {
+        padding-right: 20px;
+        margin-bottom: 25px;
+        font-size: 0.83em;
+        width: 40%;
+        box-sizing: border-box;
+    }
+}
