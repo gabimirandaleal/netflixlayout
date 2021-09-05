@@ -1,81 +1,160 @@
-# Atividade: Estilizando tela de login plataforma de streaming
+# Extra - Estilizando Página Inicial de uma Plataforma de Streaming
 
-Um desenvolvedor web normalmente começa com um rascunho, mockup ou esqueleto que mostra como a página ficará. Isso pode ser algo simples como um rascunho feito à mão em um pedaço de papel, ou pode ser um diagrama detalhado feito por um designer. Seja como for, o desenvolvedor irá usar este mockup como guia e escrever o HTML e o CSS para produzir o layout desejado.
+Bom, nós já estamos trabalhando com o projeto da plataforma de streaming há um tempo agora. Até o momento você desenvolveu as duas primeiras telas de acesso à plataforma, a tela de login e a tela de escolha de usuário(aquela "Quem está assistindo"). E nada mais justo que finalizar esse projeto, desenvolvendo agora a página inicial da plataforma.
 
-Agora você irá criar uma página HTML replicando o design exibido abaixo: a tela de login de uma plataforma de streaming. Use o que você aprendeu sobre os modelos de caixa e sobre como posicionar elementos usando CSS.
+Para essa entrega, voce vai receber um repositório, contendo a estruturação inicial mínima de um projeto. Você vai fazer o fork desse repositório e a partir disso você vai trabalhar com a estilização(CSS) da página.
 
-Para resolver essa atividade, você vai acessar esse [repositório](https://classroom.github.com/a/jlC1IJkn) e fazer o clone do projeto.
+Arquivos base já são fornecidos, juntamente com algumas imagens para você poder se preocupar apenas com o código. Também foram disponibilizadas todas as especificações necessárias: cores, fontes, tamanhos, etc.
 
-<!-- Faça o commit da sua página finalizada para um novo repositório GitLab de nome PlataformaStreaming. -->
+## Especificações
 
-Faças as alterações no arquivo css para praticar!
+### Projeto
 
-Você vai utilizar as seguintes propriedades e elementos:
+Recomendamos que você analise toda a estrutura HTML proposta para esse projeto, é importante entender como tudo foi estruturado antes de colocar a mão na massa. 
 
-### Body
+Não tenha pressa para conhecer o projeto antes de partir para ação!
 
-1. background-image (para adicionar o background de fundo)
+**Obs:** Não é obrigatório utilizar a estrutura sugerida, você pode construir o seu próprio HTML, se preferir.
 
-### Box formulário
+### Estrutura de pastas
 
-1. background-color: rgba(0,0,0,0.6);
-2. width: 450px;
-3. padding: 60px 68px 40px;
+- README.md
+- index.html
+- /assets
+    - /css
+        - style.css
+    - /img
+        - layout.png
+        - logo.png
+        - user.png
+        - /movies
+            - amigas.jpg
+            - gg.jpg
+            - good.webp
+            - papel.jpg
+            - papel2.webp
+            - ted.webp
+            - tedlogo.png
+    - /js
+        - script.js
 
-### Formulário
+### Geral
 
-1. Input type email
-2. Input type password
-3. Input type submit
+- Fonte: `'Helvetica Neue',Helvetica,Arial,sans-serif;`
+- Background body: `#141414`
 
-### Fonte sugerida
+### Container
 
-1.  `font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;`
-    - _**Obs: Não é necessário importar a fonte no seu projeto, apenas aplique a propriedade da maneira sugerida!**_
-    - _**Lembrar que a imagem pode ficar um pouco diferente do seu projeto**_
+#### Desktop
 
-### Cores utilizadas
+- O container possui uma largura máxima de `1735px`, caso a resolução seja menor que isso, o container possui um padding lateral de `60px`
 
-1. `#E62213`
-2. `#333333`
-3. `#fff`
-4. `#595959`
-5. `rgba(0,0,0,0.6)`
-6. `#B3B3B3`
-7. `#1168D0`
+#### Mobile
 
-### Centralizando box
+- O container possui um padding lateral de `30px`
 
-#### opção 1
+### Header
 
-- `margin: 0 auto;`
+#### Desktop
 
-#### opção 2
+- A logo possui `92px` de largura máxima
+- O ícone do usuário possui `32px` de largura
+- Itens menu: `#e5e5e5`
+- Item ativo menu: `#ffffff`
+- Item hover menu: `#b3b3b3`
+- Fonte: `14px`
+- Background: `linear-gradient(to bottom, rgba(0,0,0,.7) 10%, rgba(0,0,0,0))`
 
-- `position: absolute`
-- `top:50px;`
-- `left:50px;`
-- `transform: translate(-50px, -50px);`
+#### Mobile
 
-### Boas práticas
+- A logo possui `70px` de largura máxima
+- O ícone do usuário possui `28px` de largura
 
-Utilize conceitos de boas práticas
+### Destaque
 
-- Label no formulário
-- Pseudo classes para validações
-- Placeholders
-- Utilize nomes de classe descritivos
+#### Button "Mais informações"
 
-#### Como deve ficar:
+- Background: `rgba(109,109,110,0.7)`
+- Background hover: `rgba(109,109,110,0.4)`
+- Cor do texto: `#ffffff`
 
-<!--![Exemplo Box](https://gitlab.com/kenzie-academy-brasil/se/fe/basic-web-development/l_css-part-2/-/raw/master/telaLoginNetflix.png)-->
+#### Button "Assistir"
 
-### Mobile:
+- Background: `#ffffff`
+- Background hover: `rgba(255,255,255,0.75)`
+- Cor do texto: `#000000`
 
-![Exemplo Box](https://files-kenzie-academy-brasil.s3.us-east-1.amazonaws.com/q1/sprint2/streaming_plataform_mobile.png)
+#### Desktop
+
+- Fonte buttons: `22px`
+
+##### Descrição
+
+- Logo programa em destaque: `650px` de largura máxima
+- Cor descrição: `#ffffff`
+- Fonte descrição: `26px`
+- Sombra do texto: `2px 2px 4px rgb(0 0 0 / 45%)`;
+    - _Um pouco mais sobre sombras de texto_: [text-shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow)
+    - _Ferramenta:_ [Text Shadow CSS Generator](https://cssgenerator.org/text-shadow-css-generator.html)
+
+#### Mobile
+
+- Fonte buttons: `12px`
+
+##### Descrição
+
+- Logo programa em destaque: `160px` de largura máxima
+- Fonte descrição: `12px`
+
+### Catálogo
+
+#### Desktop
+
+- Cor do título: `#e5e5e5`
+- Fonte título: `26px`
+- Background seção 'Continuar assistindo': `linear-gradient(to bottom,rgba(20,20,20,0) 0,rgba(20,20,20,.15) 15%,rgba(20,20,20,.35) 29%,rgba(20,20,20,.58) 44%,#141414 68%,#141414 100%)`
+- Cada item(programa) do catálogo possui `287px` de largura máxima
+
+#### Mobile
+
+- Fonte título: `17px`
+- Cada item(programa) do catálogo possui `50%` de largura máxima
+    - _Cada seção terá 2 itens(programas) por linha_
+
+### Footer
+
+- Borda: `1px solid rgb(128 128 128 / 26%)`
+- Cor conteúdos: `gray`
+- Ícones redes sociais: `20px` de largura
+- Fonte itens do menu: `13px`
+- Fonte copyright: `11px`
+
+## Itens obrigatórios
+
+- O site precisa ser **mobile first**
+- Precisa estar **publicado no github pages**
+
+## Repositório
+
+- Faça o clone desse repositório!
+
+### Você vai utilizar os seguintes layouts como base:
+
+A imagem também está dentro do repositório também, então você pode abrir na sua máquina, caso ache melhor.
+
+#### Mobile:
+
+<!-- ![Template Mobile](https://files-kenzie-academy-brasil.s3.amazonaws.com/q1/sprint3/streaming1.png) -->
+
+[Ver em tela cheia](https://files-kenzie-academy-brasil.s3.amazonaws.com/q1/sprint3/streaming1.png)
 
 #### Desktop:
 
-![Exemplo Box](https://files-kenzie-academy-brasil.s3.us-east-1.amazonaws.com/q1/sprint2/streaming_plataform_desktop.png)
+<!-- ![Template Desktop](https://files-kenzie-academy-brasil.s3.amazonaws.com/q1/sprint3/streaming2.png) -->
 
-<!-- acactivity-stylizing-login-screen-streaming-platform.md -->
+[Ver em tela cheia](https://files-kenzie-academy-brasil.s3.amazonaws.com/q1/sprint3/streaming2.png)
+
+## Envio
+
+Faça o push do código para o seu repositório GitHub e implemente-o GitHub pages. No Canvas, por favor, envie sua url do GitHub Pages: (ex: https://nomedeusuario.github.io/streaming-platform-layout) e envie o link do seu repositório nos comentários. Após ser a correção, seu projeto deverá ficar privado.
+

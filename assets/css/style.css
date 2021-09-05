@@ -1,0 +1,436 @@
+    /*
+Theme Name: Landing Page Kenzie Academy
+Theme URI: https://kenzie.com.br/
+Author: Kenzie Academy 
+Author URI: https://kenzie.com.br/
+Description: Descrção do thema.
+Version: 1.0
+Text Domain: https://kenzie.com.br/
+
+--------------------------------------------
+ESTRUTURAÇÃO BASE
+--------------------------------------------
+**** DECLARAÇÃO DE VARIÁVEIS
+**** ESTILOS GERAIS
+**** BODY
+**** HEADER
+**** FOOTER
+**** PÁGINA INICIAL
+**** EXTRAS
+**** @MEDIA
+
+family=Montserrat -> Menus
+family=Lato -> Títulos, textos
+*/
+    /* FONTS */
+    
+    @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    /* FONTS */
+    /* VARIÁVEIS */
+    
+     :root {}
+    /* GERAL */
+    
+    html,
+    body,
+    figure,
+    div,
+    input,
+    textarea,
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    ul {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+        list-style: none;
+    }
+    
+    #btn-sandwich {
+        display: flex;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        color: white;
+    }
+    
+    #menu li {
+        padding: 10px 10px;
+    }
+    
+    #menu a {
+        text-decoration: none;
+        color: white;
+    }
+    
+    #menu a:hover {
+        border-bottom: white solid;
+    }
+    
+    #menu {
+        display: block;
+        position: absolute;
+        width: 150px;
+        background-color: black;
+        height: 0;
+        transition: 0.6s;
+        z-index: 1000;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+    
+    #nav.active #menu {
+        height: 190px;
+        visibility: visible;
+        overflow-y: auto;
+    }
+    
+    div.flex {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .flex-menu1 {
+        display: flex;
+        width: 150px;
+        color: white;
+    }
+    
+    #nav {
+        margin-left: 5vw;
+    }
+    
+    body {
+        background-color: #0c0c0c;
+        height: 50vw;
+        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(12, 12, 12, 1)), url(/assets/img/movies/ted.webp);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position-y: 100%;
+        background-position-x: 100%;
+    }
+    
+    .mobile-element {
+        display: flex;
+    }
+    
+    .secao-destaque-conteudo img {
+        width: 40vw;
+    }
+    
+    .secao-destaque {
+        padding-top: 2%;
+        width: 70%;
+        height: 30vw;
+    }
+    
+    .sumir {
+        display: none;
+    }
+    
+    .secao-catalogo {
+        margin-top: 30px;
+    }
+    
+    ul.flex {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-y: hidden;
+        justify-content: space-between;
+    }
+    
+    ul.flex li {
+        margin-right: 5px;
+    }
+    
+    ul.flex img {
+        width: 350px;
+    }
+    
+    .secao-destaque-conteudo p {
+        font-size: 1.4vw;
+        width: 40vw;
+        color: white;
+        margin-bottom: 20px;
+    }
+    
+    .secao-destaque-buttons {
+        width: 175px;
+    }
+    
+    .secao-destaque-buttons button {
+        padding: 0;
+    }
+    
+    .secao-destaque-buttons button:first-child {
+        width: 70px;
+        height: 20px;
+        font-size: 0.5rem;
+    }
+    
+    .secao-destaque-buttons img:last-child {
+        width: 7px;
+        position: relative;
+        top: 1px;
+        right: 5px;
+    }
+    
+    .secao-catalogo {
+        color: white;
+        font-size: 0.4rem;
+        background-attachment: fixed;
+    }
+    
+    .mais-informacoes {
+        width: 100px;
+        font-size: 0.5rem;
+        height: 20px;
+        background-color: rgba(0, 0, 0, 0.4);
+        border: 0px;
+        color: white;
+    }
+    
+    .mais-informacoes::before {
+        background-image: url(/assets/img/information.svg);
+        background-size: 10px 10px;
+        height: 10px;
+        width: 10px;
+        content: '0';
+        display: inline-block;
+        margin-right: 8px;
+        color: transparent;
+        background-repeat: no-repeat;
+    }
+    /*
+
+
+.secao-destaque-buttons button:first-child::before {
+    background-image: url(/assets/img/play-button.svg);
+    background-size: 8px 10px;
+    height: 10px;
+    width: 10px;
+    content: '0';
+    display: inline-block;
+    margin-right: 4px;
+    color: transparent;
+    background-repeat: no-repeat;
+}
+*/
+    
+    .mais-informacoes img {
+        margin-right: 6px;
+        width: 7px;
+    }
+    
+    .container {
+        padding: 20px 20px 0px 20px;
+    }
+    
+    .hidden,
+    .pesquisar {
+        display: none;
+    }
+    
+    .logo img {
+        width: 50px;
+        padding-top: 2px;
+    }
+    
+    .redes-sociais {
+        display: flex;
+        width: 130px;
+        justify-content: space-between;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    
+    .rodape-flex {
+        display: flex;
+        font-size: 1.2em;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        margin-top: 40px;
+    }
+    
+    .rodape-flex li {
+        width: 170px;
+    }
+    
+    .rodape-flex a {
+        text-decoration: none;
+        color: #818181;
+    }
+    
+    .redes-sociais img {
+        width: 25px;
+    }
+    
+    footer {
+        padding-bottom: 20px;
+        color: #818181;
+    }
+    
+    .secao-catalogo-titulo {
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+    }
+    /* GERAL */
+    /* HTML */
+    
+    html {}
+    /* HTML */
+    /* BODY */
+    
+    body {}
+    /* BODY */
+    /* HEADER */
+    
+    header {}
+    /* HEADER */
+    /* FOOTER */
+    /* FOOTER */
+    /* INICIAL */
+    
+    main {}
+    /* INICIAL */
+    /* EXTRAS */
+    /* para estilizar a scrollbar */
+    
+     ::-webkit-scrollbar {
+        height: 8px;
+    }
+    
+     ::-webkit-scrollbar-button {
+        display: none;
+    }
+    
+     ::-webkit-scrollbar-track {
+        background: #333;
+    }
+    
+     ::-webkit-scrollbar-track-piece {}
+    
+     ::-webkit-scrollbar-thumb {
+        background: #616161;
+    }
+    
+     ::-webkit-scrollbar-corner {}
+    
+     ::-webkit-resizer {}
+    /* EXTRAS */
+    /* MEDIA QUERIES */
+    
+    @media screen and (min-width: 600px) {
+        .secao-destaque-buttons button:first-child {
+            width: 100px;
+        }
+        .mais-informacoes {
+            width: 150px;
+        }
+        #btn-sandwich {
+            display: none;
+        }
+        #menu {
+            position: unset;
+            visibility: visible;
+            overflow-y: visible;
+            display: flex;
+            gap: .5rem;
+            width: 350px;
+        }
+        #menu li {
+            display: flex;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+        #menu a {
+            margin-top: 18px;
+        }
+        #nav {
+            display: flex;
+        }
+        #menu a:hover {
+            border-bottom: black solid;
+        }
+        .logo img {
+            width: 90px;
+        }
+        .secao-destaque-buttons {
+            width: 100%
+        }
+    }
+    
+    @media screen and (min-width: 800px) {
+        footer {
+            display: flex;
+            justify-content: center;
+        }
+        footer div.container {
+            width: 790px;
+            border-top: 1px #81818189 solid;
+            margin-top: 100px;
+        }
+        .flex-contact {
+            display: flex;
+            justify-content: space-between;
+        }
+        .rodape-flex {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 10px;
+        }
+        .rodape-flex li {
+            margin-bottom: 6px;
+        }
+        .secao-destaque-buttons button:first-child {
+            height: 30px;
+        }
+        .mais-informacoes {
+            height: 30px;
+        }
+    }
+    
+    @media screen and (min-width: 900px) {
+        .secao-destaque-buttons button:first-child {
+            width: 150px;
+            font-size: 1rem;
+            height: 25px;
+            height: 35px;
+        }
+        .mais-informacoes {
+            width: 200px;
+            font-size: 1rem;
+            height: 25px;
+            height: 35px;
+        }
+        .mais-informacoes::before {
+            background-size: 14px 15px;
+            height: 15px;
+            width: 15px;
+        }
+        .secao-destaque-buttons img:last-child {
+            width: 7px;
+            position: relative;
+            top: -1px;
+            right: 10px;
+        }
+    }
+    
+    @media screen and (min-width: 1110px) {
+        .container {
+            padding: 30px 70px 0px 70px;
+        }
+        .minha-lista {
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+    /* MEDIA QUERIES */
